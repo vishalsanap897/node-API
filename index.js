@@ -1,8 +1,7 @@
 const express = require("express");
 const cors = require('cors');
 // const coursesRoutes = require("./routes/courses.routes");
-const organization=require("./routes/organization.routes");
-const roles=require("./routes/roles.routes")
+
 const db = require("./config/db");
 const app = express();
 app.use(cors())
@@ -18,8 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.send("Hello everyone!");
 });
-app.use("/roles",roles)
-app.use("/org",organization)
+
 // app.use("/course", coursesRoutes);
 
 // app.listen(port, () => {
