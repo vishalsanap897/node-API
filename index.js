@@ -7,6 +7,8 @@ const app = express();
 app.use(cors())
 
 const bodyParser = require("body-parser");
+const appRoute = require("./routes/app.route")
+const course=require("./routes/course.routes")
 
 // support parsing of application/json type post data
 app.use(bodyParser.json());
@@ -17,6 +19,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.send("Hello everyone!");
 });
+app.use("/app",appRoute)
+app.use("/course",course)
 
 // app.use("/course", coursesRoutes);
 
