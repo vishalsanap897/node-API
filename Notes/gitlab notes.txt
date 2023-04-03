@@ -1,0 +1,14 @@
+we need to create own branch for that 
+    step 1 :> goto git bash 
+    step 2:> hit this command = git checkout -b feature/ur branch name (what u want )
+
+then suppose you  want to push ur code in that, that time u need to use this command 
+    step 1 :> goto git bash 
+    step 2:> git add.
+    step 3:> git commit -m "write here what u did in ur project"
+    step 4 :> git push origin ------(ur branch name)
+
+
+then suppose u want to pull the code for any brances that time u need to use  this command 
+    step 1 :> goto git bash 
+    step 2:> git pull origin main/any branch name what u want to pull
