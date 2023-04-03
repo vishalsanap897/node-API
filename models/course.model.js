@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const appSchema =new mongoose.Schema({
+const courseSchema =new mongoose.Schema({
   // course_id: {
   //   type: Number,
   //   required: true
@@ -30,4 +30,4 @@ const appSchema =new mongoose.Schema({
 {strict:false});
 
 
-module.exports = mongoose.model("app",appSchema)
+module.exports = mongoose.model("course",courseSchema)
