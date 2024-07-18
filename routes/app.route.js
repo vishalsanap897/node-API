@@ -13,6 +13,29 @@ router.get("/", (req, res) => {
   res.send("Collection API 1.0");
 });
 
+
+//find by name
+router.get("/find", (req, res) => {
+  Service.findByName(req.query.name)
+    .then((data) => {
+      res.status(200).send({
+        status: 200,
+        success: true,
+        data: data,
+        message: "Course fetched successfully",
+      });
+    })
+    .catch((err) => {
+      res.status(500).send({
+        status: 500,
+        success: false,
+        data: null,
+        message: "Internal server error",
+      });
+    });
+});
+
+
 router.get("/Get-all-data", async (req, res) => {
   let result = await CollectionService.getAllCollection();
   res.status(200).send({
@@ -24,7 +47,7 @@ router.get("/Get-all-data", async (req, res) => {
 });
 
 //post collecton
-router.post("/update-data", (req, res) => {
+router.post("/add-data", (req, res) => {
   CollectionService.save(req.body)
     .then(function (data) {
       console.log("savvev", data)

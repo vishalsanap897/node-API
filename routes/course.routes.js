@@ -12,6 +12,8 @@ router.get("/", (req, res) => {
   res.send("Courses API 1.0");
 });
 
+
+
 router.get("/all", async (req, res) => {
   let result = await CourseService.getAllCourse();
   res.status(200).send({

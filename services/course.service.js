@@ -10,6 +10,20 @@ const course = {
     return await Course.create(courseObject);
   },
 
+  findByid: async function(id)
+ {
+  try {
+    const doc = await Course.findById(id)
+;
+    console.log("dataa ", doc);
+    return doc;
+    
+  } catch (err) {
+    console.log("error ", err);
+    return false;
+  }
+},
+
 
   //find by name
   findByName: async function (name) {

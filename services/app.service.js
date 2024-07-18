@@ -8,11 +8,11 @@ const app= {
     return await Collection.find();
   },
 
-  save: async function (collectionObject) {
-    return await Collection.create(collectionObject);
+  save: async function (CollectionObject) {
+    return await Collection.create(CollectionObject);
   },
 
-  //update collection.....
+  //update Collection.....
   updateCollection: function (id, topic) {
     Course.findByIdAndUpdate(id, topic, { new: true }, function (err, doc) {
       if (err) {
@@ -24,7 +24,7 @@ const app= {
       }
     });
   },
-  //Delete collection.......
+  //Delete Collection.......
   deleteCollection: function (id)
  {
     return new Promise((resolve, reject) => {
